@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		113633FB7ED209A8E1BB2193 /* libPods-LBYearMonthPickerVCExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9D68DB15F1F41C82D247CC /* libPods-LBYearMonthPickerVCExample.a */; };
+		4046A9E7233DE85700299809 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046A9E6233DE85700299809 /* AppDelegate.m */; };
+		4046A9ED233DE85700299809 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046A9EC233DE85700299809 /* ViewController.m */; };
+		4046A9F2233DE85A00299809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4046A9F1233DE85A00299809 /* Assets.xcassets */; };
+		4046A9F5233DE85A00299809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4046A9F3233DE85A00299809 /* LaunchScreen.storyboard */; };
+		4046A9F8233DE85A00299809 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046A9F7233DE85A00299809 /* main.m */; };
+		4046A9FF233DE89900299809 /* LBYearMonthPickerVC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4046A9FE233DE89900299809 /* LBYearMonthPickerVC.podspec */; };
+		4046AA03233DE8A200299809 /* LBYearMonthPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046AA02233DE8A200299809 /* LBYearMonthPickerVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4046A9E2233DE85700299809 /* LBYearMonthPickerVCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBYearMonthPickerVCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4046A9E5233DE85700299809 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4046A9E6233DE85700299809 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4046A9EB233DE85700299809 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4046A9EC233DE85700299809 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4046A9F1233DE85A00299809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4046A9F4233DE85A00299809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4046A9F6233DE85A00299809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4046A9F7233DE85A00299809 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4046A9FE233DE89900299809 /* LBYearMonthPickerVC.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LBYearMonthPickerVC.podspec; sourceTree = "<group>"; };
+		4046AA01233DE8A200299809 /* LBYearMonthPickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYearMonthPickerVC.h; sourceTree = "<group>"; };
+		4046AA02233DE8A200299809 /* LBYearMonthPickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYearMonthPickerVC.m; sourceTree = "<group>"; };
+		409E4B2059C6B9B86D11BB8F /* Pods-LBYearMonthPickerVCExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBYearMonthPickerVCExample.release.xcconfig"; path = "Target Support Files/Pods-LBYearMonthPickerVCExample/Pods-LBYearMonthPickerVCExample.release.xcconfig"; sourceTree = "<group>"; };
+		4494A2E8D66EAAC4C674ECC2 /* Pods-LBYearMonthPickerVCExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBYearMonthPickerVCExample.debug.xcconfig"; path = "Target Support Files/Pods-LBYearMonthPickerVCExample/Pods-LBYearMonthPickerVCExample.debug.xcconfig"; sourceTree = "<group>"; };
+		8B9D68DB15F1F41C82D247CC /* libPods-LBYearMonthPickerVCExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LBYearMonthPickerVCExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4046A9DF233DE85700299809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113633FB7ED209A8E1BB2193 /* libPods-LBYearMonthPickerVCExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4046A9D9233DE85700299809 = {
+			isa = PBXGroup;
+			children = (
+				4046A9FE233DE89900299809 /* LBYearMonthPickerVC.podspec */,
+				4046A9E4233DE85700299809 /* LBYearMonthPickerVCExample */,
+				4046A9E3233DE85700299809 /* Products */,
+				FF5B7F1D7654590BA243EEF2 /* Pods */,
+				C8BA002E683CB8CCAA56AB09 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4046A9E3233DE85700299809 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4046A9E2233DE85700299809 /* LBYearMonthPickerVCExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4046A9E4233DE85700299809 /* LBYearMonthPickerVCExample */ = {
+			isa = PBXGroup;
+			children = (
+				4046AA00233DE8A200299809 /* LBYearMonthPickerVC */,
+				4046A9E5233DE85700299809 /* AppDelegate.h */,
+				4046A9E6233DE85700299809 /* AppDelegate.m */,
+				4046A9EB233DE85700299809 /* ViewController.h */,
+				4046A9EC233DE85700299809 /* ViewController.m */,
+				4046A9F1233DE85A00299809 /* Assets.xcassets */,
+				4046A9F3233DE85A00299809 /* LaunchScreen.storyboard */,
+				4046A9F6233DE85A00299809 /* Info.plist */,
+				4046A9F7233DE85A00299809 /* main.m */,
+			);
+			path = LBYearMonthPickerVCExample;
+			sourceTree = "<group>";
+		};
+		4046AA00233DE8A200299809 /* LBYearMonthPickerVC */ = {
+			isa = PBXGroup;
+			children = (
+				4046AA01233DE8A200299809 /* LBYearMonthPickerVC.h */,
+				4046AA02233DE8A200299809 /* LBYearMonthPickerVC.m */,
+			);
+			path = LBYearMonthPickerVC;
+			sourceTree = SOURCE_ROOT;
+		};
+		C8BA002E683CB8CCAA56AB09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B9D68DB15F1F41C82D247CC /* libPods-LBYearMonthPickerVCExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF5B7F1D7654590BA243EEF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4494A2E8D66EAAC4C674ECC2 /* Pods-LBYearMonthPickerVCExample.debug.xcconfig */,
+				409E4B2059C6B9B86D11BB8F /* Pods-LBYearMonthPickerVCExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4046A9E1233DE85700299809 /* LBYearMonthPickerVCExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4046A9FB233DE85A00299809 /* Build configuration list for PBXNativeTarget "LBYearMonthPickerVCExample" */;
+			buildPhases = (
+				F33F9D17403E3B5A9B66D9E7 /* [CP] Check Pods Manifest.lock */,
+				4046A9DE233DE85700299809 /* Sources */,
+				4046A9DF233DE85700299809 /* Frameworks */,
+				4046A9E0233DE85700299809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LBYearMonthPickerVCExample;
+			productName = LBYearMonthPickerVCExample;
+			productReference = 4046A9E2233DE85700299809 /* LBYearMonthPickerVCExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4046A9DA233DE85700299809 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "刘彬";
+				TargetAttributes = {
+					4046A9E1233DE85700299809 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 4046A9DD233DE85700299809 /* Build configuration list for PBXProject "LBYearMonthPickerVCExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4046A9D9233DE85700299809;
+			productRefGroup = 4046A9E3233DE85700299809 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4046A9E1233DE85700299809 /* LBYearMonthPickerVCExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4046A9E0233DE85700299809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4046A9F5233DE85A00299809 /* LaunchScreen.storyboard in Resources */,
+				4046A9F2233DE85A00299809 /* Assets.xcassets in Resources */,
+				4046A9FF233DE89900299809 /* LBYearMonthPickerVC.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F33F9D17403E3B5A9B66D9E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LBYearMonthPickerVCExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4046A9DE233DE85700299809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4046AA03233DE8A200299809 /* LBYearMonthPickerVC.m in Sources */,
+				4046A9ED233DE85700299809 /* ViewController.m in Sources */,
+				4046A9E7233DE85700299809 /* AppDelegate.m in Sources */,
+				4046A9F8233DE85A00299809 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4046A9F3233DE85A00299809 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4046A9F4233DE85A00299809 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4046A9F9233DE85A00299809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4046A9FA233DE85A00299809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4046A9FC233DE85A00299809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4494A2E8D66EAAC4C674ECC2 /* Pods-LBYearMonthPickerVCExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L8YGY7ZJ2;
+				INFOPLIST_FILE = LBYearMonthPickerVCExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "--.LBYearMonthPickerVCExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4046A9FD233DE85A00299809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 409E4B2059C6B9B86D11BB8F /* Pods-LBYearMonthPickerVCExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L8YGY7ZJ2;
+				INFOPLIST_FILE = LBYearMonthPickerVCExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "--.LBYearMonthPickerVCExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4046A9DD233DE85700299809 /* Build configuration list for PBXProject "LBYearMonthPickerVCExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4046A9F9233DE85A00299809 /* Debug */,
+				4046A9FA233DE85A00299809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4046A9FB233DE85A00299809 /* Build configuration list for PBXNativeTarget "LBYearMonthPickerVCExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4046A9FC233DE85A00299809 /* Debug */,
+				4046A9FD233DE85A00299809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4046A9DA233DE85700299809 /* Project object */;
+}
