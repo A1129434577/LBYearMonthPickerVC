@@ -28,7 +28,7 @@
 }
 -(void)showPicker{
     LBYearMonthPickerVC *vc = [[LBYearMonthPickerVC alloc] init];
-    vc.eachYearDefaultLikeMonths = @{@1:@"全部"};
+    vc.eachYearDefaultLikeMonths = @{@0:@"全部"};
     vc.view.layer.cornerRadius = 10;
     [self presentViewController:vc animated:YES completion:nil];
     vc.pickerViewSelectDate = ^(NSString * _Nonnull yearString, NSString * _Nonnull monthString) {

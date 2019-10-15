@@ -1,2 +1,11 @@
 # LBYearMonthPickerVC
-只显示年月，并且可以自定义参数加入到任何位置，比如【全部年】/【全部月】的时间选择器。
+```obj
+LBYearMonthPickerVC *vc = [[LBYearMonthPickerVC alloc] init];
+vc.eachYearDefaultLikeMonths = @{@0:@"全部"};
+vc.view.layer.cornerRadius = 10;
+[self presentViewController:vc animated:YES completion:nil];
+vc.pickerViewSelectDate = ^(NSString * _Nonnull yearString, NSString * _Nonnull monthString) {
+    NSLog(@"%@年%@月",yearString,monthString);
+};
+```
+![]()
