@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3586A0FD2146A4C9B9F6223A39912874"
-               BuildableName = "libLBCustemPresentTransitions.a"
-               BlueprintName = "LBCustemPresentTransitions"
+               BlueprintIdentifier = "E7445FC9D56CEAF43DD4EFE332940EFA"
+               BuildableName = "libLBPresentTransitions.a"
+               BlueprintName = "LBPresentTransitions"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

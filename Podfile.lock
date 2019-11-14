@@ -1,16 +1,16 @@
 PODS:
-  - LBCustemPresentTransitions (0.0.1)
+  - LBPresentTransitions (0.0.2)
 
 DEPENDENCIES:
-  - LBCustemPresentTransitions
+  - LBPresentTransitions
 
 SPEC REPOS:
   trunk:
-    - LBCustemPresentTransitions
+    - LBPresentTransitions
 
 SPEC CHECKSUMS:
-  LBCustemPresentTransitions: 0f051727d59b2517169c10d4a1f30ca6f172d81c
+  LBPresentTransitions: c96a48e7dccaf62ee08698b2e1fa1aa4b5eb45d4
 
-PODFILE CHECKSUM: ba0896e96d86e42c0bedd99342cc7e6ff6a93612
+PODFILE CHECKSUM: 62eff44b0fe3f5b89e8b0c738836f1068bf2d834
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.8.4

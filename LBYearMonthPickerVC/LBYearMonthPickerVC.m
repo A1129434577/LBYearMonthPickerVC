@@ -7,9 +7,12 @@
 //
 
 #import "LBYearMonthPickerVC.h"
-#import "LBCustemPresentTransitions.h"
+#import "LBPresentTransitions.h"
 
 @interface LBYearMonthPickerVC ()<UIPickerViewDelegate,UIPickerViewDataSource>
+{
+    LBPresentTransitions *_transitions;
+}
 @property (nonatomic,strong)NSMutableArray<NSString *> *yearsArray;
 @property (nonatomic,strong)NSMutableArray<NSArray *> *monthsOfAllYearsArray;//这些年份的所有月份
 @property (nonatomic,strong)UIPickerView *datePickerView;
@@ -20,9 +23,10 @@
 {
     self = [super init];
     if (self) {
-        LBCustemPresentTransitions *transitions = [LBCustemPresentTransitions shareInstanse];
-        transitions.contentMode = LBViewContentModeBottom;
-        self.transitioningDelegate = transitions;
+        _transitions = [LBPresentTransitions new];
+        _transitions.coverViewType = LBTransitionsCoverViewAlpha0_5;
+        _transitions.contentMode = LBTransitionsContentModeBottom;
+        self.transitioningDelegate = _transitions;
         self.modalPresentationStyle = UIModalPresentationCustom;
         self.minimumDate = [NSDate dateWithTimeIntervalSince1970:0];
         self.maximumDate = [NSDate date];
