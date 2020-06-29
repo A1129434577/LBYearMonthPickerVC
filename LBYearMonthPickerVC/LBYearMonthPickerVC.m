@@ -77,10 +77,12 @@
     }
     
     [_datePickerView selectRow:[_yearsArray indexOfObject:_selectedSimilarYear] inComponent:0 animated:NO];
-    [_datePickerView reloadComponent:1];
     
-    if (_selectedSimilarMonth.length) {
-        [_datePickerView selectRow:[_monthsOfAllYearsArray[[_yearsArray indexOfObject:_selectedSimilarYear]] indexOfObject:_selectedSimilarMonth] inComponent:1 animated:NO];
+    if (self.type == LBYearMonthPickerYearAndMonth) {
+        [_datePickerView reloadComponent:1];
+        if (_selectedSimilarMonth.length) {
+            [_datePickerView selectRow:[_monthsOfAllYearsArray[[_yearsArray indexOfObject:_selectedSimilarYear]] indexOfObject:_selectedSimilarMonth] inComponent:1 animated:NO];
+        }
     }
 }
     
@@ -158,7 +160,18 @@
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 2;
+    switch (self.type) {
+        case LBYearMonthPickerYear:
+            return 1;
+            break;
+        case LBYearMonthPickerYearAndMonth:
+            return 2;
+            break;
+        default:
+            return 0;
+            break;
+    }
+    
 }
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if (component == 0) {
@@ -178,8 +191,10 @@
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    if (component == 0) {
-        [pickerView reloadComponent:1];
+    if (self.type == LBYearMonthPickerYearAndMonth) {
+        if (component == 0) {
+            [pickerView reloadComponent:1];
+        }
     }
 }
 
@@ -191,7 +206,8 @@
     [weakSelf dismissViewControllerAnimated:YES completion:^{
         weakSelf.selectedSimilarYear = weakSelf.yearsArray[[weakSelf.datePickerView selectedRowInComponent:0]];
         weakSelf.selectedSimilarMonth = weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]][[weakSelf.datePickerView selectedRowInComponent:1]];
-        weakSelf.pickerViewSelectDate?weakSelf.pickerViewSelectDate(weakSelf.selectedSimilarYear,weakSelf.selectedSimilarMonth):NULL;
+        weakSelf.pickerViewSelectDate?
+        weakSelf.pickerViewSelectDate(weakSelf.selectedSimilarYear,weakSelf.selectedSimilarMonth):NULL;
     }];
 }
 @end

@@ -28,6 +28,8 @@
 }
 -(void)showPicker{
     LBYearMonthPickerVC *vc = [[LBYearMonthPickerVC alloc] init];
+    vc.type = LBYearMonthPickerYear;
+    vc.defaultLikeYearsAndMonths = @{@(0):@{@"全部年":@[@"3",@"5"]}};
     vc.eachYearDefaultLikeMonths = @{@0:@"全部"};
     vc.view.layer.cornerRadius = 10;
     [self presentViewController:vc animated:YES completion:nil];
