@@ -30,6 +30,9 @@
         self.modalPresentationStyle = UIModalPresentationCustom;
         self.minimumDate = [NSDate dateWithTimeIntervalSince1970:0];
         self.maximumDate = [NSDate date];
+        
+        _yearsArray = [NSMutableArray array];
+        _monthsOfAllYearsArray = [NSMutableArray array];
     }
     return self;
 }
@@ -65,30 +68,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self dataSource];
-    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    if (!_selectedSimilarYear.length) {
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"yyyy"];
-        self.selectedSimilarYear = [formatter stringFromDate:self.maximumDate];
-    }
-    
-    [_datePickerView selectRow:[_yearsArray indexOfObject:_selectedSimilarYear] inComponent:0 animated:NO];
-    
-    if (self.type == LBYearMonthPickerYearAndMonth) {
-        [_datePickerView reloadComponent:1];
-        if (_selectedSimilarMonth.length) {
-            [_datePickerView selectRow:[_monthsOfAllYearsArray[[_yearsArray indexOfObject:_selectedSimilarYear]] indexOfObject:_selectedSimilarMonth] inComponent:1 animated:NO];
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (!weakSelf.selectedSimilarYear.length) {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy"];
+            weakSelf.selectedSimilarYear = [formatter stringFromDate:weakSelf.maximumDate];
         }
-    }
+        
+        [weakSelf.datePickerView selectRow:[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear] inComponent:0 animated:NO];
+        
+        if (weakSelf.type == LBYearMonthPickerYearAndMonth) {
+            [weakSelf.datePickerView reloadComponent:1];
+            
+            if (weakSelf.selectedSimilarMonth.length) {
+                [weakSelf.datePickerView selectRow:[weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]] indexOfObject:weakSelf.selectedSimilarMonth] inComponent:1 animated:NO];
+            }
+            
+        }
+    });
+    
+    
 }
     
 -(void)dataSource{
-    _yearsArray = [NSMutableArray array];
-    _monthsOfAllYearsArray = [NSMutableArray array];
+    
     //设定数据格式为xxxx-mm
     NSDateFormatter *yearMonthFormatter = [[NSDateFormatter alloc] init];
     yearMonthFormatter.timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
@@ -178,7 +185,9 @@
         return self.yearsArray.count;
     }else{
         NSString *selectedYear = self.yearsArray[[pickerView selectedRowInComponent:0]];
-        return [self.monthsOfAllYearsArray[[self.yearsArray indexOfObject:selectedYear]] count];
+        NSUInteger monthCount = [self.monthsOfAllYearsArray[[self.yearsArray indexOfObject:selectedYear]] count];
+        NSLog(@"%@------%ld",selectedYear,monthCount);
+        return monthCount;
     }
 }
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
@@ -186,7 +195,8 @@
         return self.yearsArray[row];
     }else{
         NSString *selectedYear = self.yearsArray[[pickerView selectedRowInComponent:0]];
-        return self.monthsOfAllYearsArray[[self.yearsArray indexOfObject:selectedYear]][row];
+        NSString *month = self.monthsOfAllYearsArray[[self.yearsArray indexOfObject:selectedYear]][row];
+        return month;
     }
 }
 

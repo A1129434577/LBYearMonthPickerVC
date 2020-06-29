@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "LBYearMonthPickerVC"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "只能选择年月的时间选择器"
   spec.description  = "只显示年月，并且可以自定义参数加入到任何位置，比如【全部年】/【全部月】的时间选择器。"
   spec.homepage     = "https://github.com/A1129434577/LBYearMonthPickerVC"
