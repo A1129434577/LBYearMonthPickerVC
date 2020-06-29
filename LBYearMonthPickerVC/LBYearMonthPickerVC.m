@@ -9,6 +9,31 @@
 #import "LBYearMonthPickerVC.h"
 #import "LBPresentTransitions.h"
 
+#define LBYearMonthPicker_WINDOW \
+({\
+id<UIApplicationDelegate> delegate = [UIApplication sharedApplication].delegate;\
+UIWindow *keyWindow = [delegate respondsToSelector:@selector(window)]?delegate.window:nil;\
+if (keyWindow == nil) {\
+    if (@available(ios 13, *)) {\
+        for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes){\
+            if (windowScene.activationState == UISceneActivationStateForegroundActive){\
+                UIWindow *window = windowScene.windows.firstObject;\
+                if (window) {\
+                    keyWindow = window;\
+                }\
+                break;\
+            }\
+        }\
+        if (keyWindow == nil) {\
+            keyWindow = [UIApplication sharedApplication].keyWindow;\
+        }\
+    }else{\
+        keyWindow = [UIApplication sharedApplication].keyWindow;\
+    }\
+}\
+keyWindow;\
+})
+
 @interface LBYearMonthPickerVC ()<UIPickerViewDelegate,UIPickerViewDataSource>
 {
     LBPresentTransitions *_transitions;
@@ -62,7 +87,12 @@
     _datePickerView.dataSource = self;
     [self.view addSubview:_datePickerView];
     
-    self.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetMaxY(_datePickerView.frame));
+    CGFloat safeAreaInsetsBottom = 0;
+    if (@available(iOS 11.0, *)) {
+        safeAreaInsetsBottom = LBYearMonthPicker_WINDOW.safeAreaInsets.bottom;
+    }
+    
+    self.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetMaxY(_datePickerView.frame)+safeAreaInsetsBottom);
 }
 
 - (void)viewDidLoad {
