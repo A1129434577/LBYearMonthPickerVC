@@ -244,8 +244,16 @@ keyWindow;\
 -(void)pickerSelectedDate{
     typeof(self) __weak weakSelf = self;
     [weakSelf dismissViewControllerAnimated:YES completion:^{
-        weakSelf.selectedSimilarYear = weakSelf.yearsArray[[weakSelf.datePickerView selectedRowInComponent:0]];
-        weakSelf.selectedSimilarMonth = weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]][[weakSelf.datePickerView selectedRowInComponent:1]];
+        NSUInteger yearIndex = [weakSelf.datePickerView selectedRowInComponent:0];
+        if (yearIndex < weakSelf.yearsArray.count) {
+            weakSelf.selectedSimilarYear = weakSelf.yearsArray[[weakSelf.datePickerView selectedRowInComponent:0]];
+        }
+        
+        NSArray *monthArray = weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]];
+        NSUInteger monthIndex = [weakSelf.datePickerView selectedRowInComponent:1];
+        if (monthIndex < monthArray.count) {
+            weakSelf.selectedSimilarMonth = weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]][[weakSelf.datePickerView selectedRowInComponent:1]];
+        }
         weakSelf.pickerViewSelectDate?
         weakSelf.pickerViewSelectDate(weakSelf.selectedSimilarYear,weakSelf.selectedSimilarMonth):NULL;
     }];
