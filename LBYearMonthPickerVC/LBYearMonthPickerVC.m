@@ -216,7 +216,6 @@ keyWindow;\
     }else{
         NSString *selectedYear = self.yearsArray[[pickerView selectedRowInComponent:0]];
         NSUInteger monthCount = [self.monthsOfAllYearsArray[[self.yearsArray indexOfObject:selectedYear]] count];
-        NSLog(@"%@------%ld",selectedYear,monthCount);
         return monthCount;
     }
 }
