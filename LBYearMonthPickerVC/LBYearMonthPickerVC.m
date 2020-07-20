@@ -109,14 +109,24 @@ keyWindow;\
             [formatter setDateFormat:@"yyyy"];
             weakSelf.selectedSimilarYear = [formatter stringFromDate:weakSelf.maximumDate];
         }
-        
-        [weakSelf.datePickerView selectRow:[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear] inComponent:0 animated:NO];
+        NSUInteger yearIndex = [weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear];
+        if (yearIndex<weakSelf.yearsArray.count) {
+            [weakSelf.datePickerView selectRow:[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear] inComponent:0 animated:NO];
+        }else{
+            yearIndex = 0;
+        }
         
         if (weakSelf.type == LBYearMonthPickerYearAndMonth) {
             [weakSelf.datePickerView reloadComponent:1];
             
             if (weakSelf.selectedSimilarMonth.length) {
-                [weakSelf.datePickerView selectRow:[weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]] indexOfObject:weakSelf.selectedSimilarMonth] inComponent:1 animated:NO];
+                if (yearIndex<weakSelf.monthsOfAllYearsArray.count) {
+                    NSArray *oneYearMonthsArray = weakSelf.monthsOfAllYearsArray[yearIndex];
+                    NSUInteger monthIndex = [oneYearMonthsArray indexOfObject:weakSelf.selectedSimilarMonth];
+                    if (monthIndex < oneYearMonthsArray.count) {
+                        [weakSelf.datePickerView selectRow:monthIndex inComponent:1 animated:NO];
+                    }
+                }
             }
             
         }
