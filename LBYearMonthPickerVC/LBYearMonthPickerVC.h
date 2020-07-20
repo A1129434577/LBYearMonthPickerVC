@@ -16,6 +16,8 @@ typedef NS_ENUM(NSUInteger, LBYearMonthPickerType) {
 };
 @interface LBYearMonthPickerVC : UIViewController
 @property (nonatomic, assign) LBYearMonthPickerType type;//default LBYearMonthPickerYearAndMonth
+@property (nonatomic, strong) UIButton *cancelButton;
+@property (nonatomic, strong) UIButton *selectButton;
 
 @property (nonatomic,copy)void(^pickerViewSelectDate)(NSString * _Nonnull yearString,NSString * _Nonnull monthString);
 

@@ -72,6 +72,7 @@ keyWindow;\
     [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(pickerCancel) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelButton];
+    _cancelButton = cancelButton;
     
     //确定
     UIButton *selectButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.view.frame)-CGRectGetWidth(cancelButton.frame)-15, CGRectGetMinY(cancelButton.frame), CGRectGetWidth(cancelButton.frame), CGRectGetHeight(cancelButton.frame))];
@@ -79,7 +80,7 @@ keyWindow;\
     [selectButton setTitle:@"确定" forState:UIControlStateNormal];
     [selectButton addTarget:self action:@selector(pickerSelectedDate) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:selectButton];
-    
+    _selectButton = selectButton;
     
     
     _datePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(selectButton.frame), CGRectGetWidth(self.view.frame), 210)];
@@ -248,11 +249,15 @@ keyWindow;\
             weakSelf.selectedSimilarYear = weakSelf.yearsArray[[weakSelf.datePickerView selectedRowInComponent:0]];
         }
         
-        NSArray *monthArray = weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]];
-        NSUInteger monthIndex = [weakSelf.datePickerView selectedRowInComponent:1];
-        if (monthIndex < monthArray.count) {
-            weakSelf.selectedSimilarMonth = weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]][[weakSelf.datePickerView selectedRowInComponent:1]];
+        NSUInteger yearMonthIndex = [weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear];
+        if (yearMonthIndex<weakSelf.monthsOfAllYearsArray.count) {
+            NSArray *monthArray = weakSelf.monthsOfAllYearsArray[yearMonthIndex];
+            NSUInteger monthIndex = [weakSelf.datePickerView selectedRowInComponent:1];
+            if (monthIndex < monthArray.count) {
+                weakSelf.selectedSimilarMonth = weakSelf.monthsOfAllYearsArray[[weakSelf.yearsArray indexOfObject:weakSelf.selectedSimilarYear]][[weakSelf.datePickerView selectedRowInComponent:1]];
+            }
         }
+        
         weakSelf.pickerViewSelectDate?
         weakSelf.pickerViewSelectDate(weakSelf.selectedSimilarYear,weakSelf.selectedSimilarMonth):NULL;
     }];
